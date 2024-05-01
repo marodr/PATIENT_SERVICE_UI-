@@ -6,12 +6,14 @@ import {
   flexColumnGrow,
   sideListWrapper,
 } from "@styles/styles";
+
 import Patients from "./Patients";
+import Nurses from "./Nurses";
+import Hospitals from "./Hospitals";
 import Physicians from "./Physicians";
-import Hospitals from "./Hospitals"
-import Appointments from "./Appointments"
-import Home from "./Home"
-import Nurses from "./Nurses"
+import Home from "./Home";
+import Appointments from "./Appointments";
+import AddPatientForm from "./AddPatientForm";
 
 const AppContentArea = ({ isOpen }) => {
   const sideBarWidth = isOpen ? "70px" : "250px";
@@ -38,12 +40,7 @@ const AppContentArea = ({ isOpen }) => {
               width: `calc(100vw - ${sideBarWidth})`,
             }}
           >
-            <Patients />
-            <Nurses />
-            <Hospitals />
-            <Home />
-            <Appointments />
-            <Physicians />
+            &nbsp;
           </Box>
           <Box
             component="div"
@@ -57,7 +54,13 @@ const AppContentArea = ({ isOpen }) => {
               width: `calc(100vw - ${sideBarWidth})`,
             }}
           >
-            &nbsp;
+            <Patients />
+            <AddPatientForm />
+            <Nurses />
+            <Home />
+            <Appointments />
+            <Physicians />
+            <Hospitals />
           </Box>
         </Box>
       </Box>

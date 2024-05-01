@@ -1,8 +1,9 @@
 import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  let location = useLocation();
-  if (location.pathname === "/home") {
+  const location = useLocation();
+
+  if (location.pathname === "/home" || location.pathname === "/") {
     return (
       <>
         <h1>Home</h1>
@@ -10,4 +11,5 @@ const Home = () => {
     );
   }
 };
+
 export default Home;

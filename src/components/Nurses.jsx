@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
 
 const Nurses = () => {
-  let location = useLocation();
+  const location = useLocation();
+
   if (location.pathname === "/nurses") {
     return (
       <>
@@ -10,4 +11,5 @@ const Nurses = () => {
     );
   }
 };
+
 export default Nurses;

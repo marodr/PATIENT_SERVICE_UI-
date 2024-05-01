@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
 
 const Appointments = () => {
-  let location = useLocation();
+  const location = useLocation();
+
   if (location.pathname === "/appointments") {
     return (
       <>
@@ -10,4 +11,5 @@ const Appointments = () => {
     );
   }
 };
+
 export default Appointments;
